@@ -1,0 +1,12 @@
+SMET 1.1 ASCII
+[HEADER]
+station_id       = forcing
+station_name     = forcing
+latitude         = 67.01054
+longitude        = -46.81676
+altitude         = 1894
+nodata           = -999
+tz               = 0
+fields           = timestamp T  RH  VW  ISWR  NET_LW  PSUM
+[DATA]
+2021-04-29T00:00:00 273.15 1 0 0 0 0
