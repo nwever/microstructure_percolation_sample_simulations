@@ -7,12 +7,9 @@
 
 ## Steps to reproduce:
 1) Create directories ```./output/```, ```./plots/``` and ```./postprocess/```
-
-2) Run the simulations using:
-```snowpack -c sample1.ini -e 2021-06-01T00:00:00```
-and
-```snowpack -c sample2.ini -e 2021-06-01T00:00:00```
-
-3) Run ```bash main_postprocess.sh```. This creates a file ```main_postprocess_to_exec.lst```
-4) Run ```bash main_postprocess_to_exec.lst``` which will create the files in ```./postprocess/``` that are needed for plotting.
-5) Run ```bash main_plotsimulations.sh``` to create the plot ```topublish1.pdf``` in the directory ```./plots/```
+2) Modify the first line in ```run_all.sh``` to point to the ```bin``` path where the SNOWPACK binary is installed
+3) Run all the simulations using:
+```bash run_all.sh```
+4) Run ```bash main_postprocess.sh```. This creates a file ```main_postprocess_to_exec.lst```
+5) Run ```bash main_postprocess_to_exec.lst``` which will create the files in ```./postprocess/``` that are needed for plotting.
+6) Run ```bash main_plotsimulations.sh``` to create the plots ```topublish1.pdf``` and ```sensitivity_study.pdf``` in the directory ```./plots/```
