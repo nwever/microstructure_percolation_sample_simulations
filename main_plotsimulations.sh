@@ -123,8 +123,8 @@ echo "set xl 'Time (hours)'" >> ${plotfilename}
 echo "set yl 'Grain size (mm)' offset 0.9,0" >> ${plotfilename}
 echo "set ytics autofreq" >> ${plotfilename}
 echo "set ytics 0.1" >> ${plotfilename}
-echo "set yrange[0.5:1.4]" >> ${plotfilename}
-echo "set key at graph 0.74, graph 0.94 font ',15'" >> ${plotfilename}
+echo "set yrange[0.5:1.1]" >> ${plotfilename}
+echo "set key at graph 0.98, graph 0.374 font ',15'" >> ${plotfilename}
 echo "set label 100 \"(a)\" at graph -0.19, graph 1.14 center front tc \"#000000\" font \"Helvetica,22\"" >> ${plotfilename}
 echo "pl \"<(awk '(NR==101) {for(i=1; i<=NF; i++) {print \$i}}' postprocess/${g1}_gs.dat)\" w l lw 2 lc rgb 'black' title 'FC above transition' \\" >> ${plotfilename}
 echo ",  \"<(awk '(NR==102) {for(i=1; i<=NF; i++) {print \$i}}' postprocess/${g1}_gs.dat)\" w l lw 2 lc rgb 'red' title 'FC below transition' \\" >> ${plotfilename}
@@ -180,8 +180,9 @@ echo ",  \"<(awk '(NR==102) {for(i=1; i<=NF; i++) {print \$i}}' postprocess/${g2
 # Cold snow with temp gradient
 g1=forcing_REQ_sample1_drysnow
 g2=forcing_REQ_sample2_drysnow
-echo "set title 'Firn at -25 {\260}C with -25 {\260}C/m gradient" >> ${plotfilename}
+echo "set title 'Firn at -10 {\260}C with -10 {\260}C/m gradient" >> ${plotfilename}
 echo "set yl 'Grain size (mm)' offset 0.9,0" >> ${plotfilename}
+echo "set yrange[0.5:1.5]" >> ${plotfilename}
 echo "set ytics autofreq" >> ${plotfilename}
 echo "set ytics 0.1" >> ${plotfilename}
 echo "set xtics 2000" >> ${plotfilename}
