@@ -1,6 +1,6 @@
 # microstructure_percolation_sample_simulations
 ## Required:
-- MeteoIO and SNOWPACK (https://code.wsl.ch/snow-models/ or https://github.com/snowpack-model/snowpack)
+- MeteoIO and SNOWPACK (https://code.wsl.ch/snow-models/ or https://github.com/snowpack-model/snowpack). The recommended version of MeteoIO and SNOWPACK to use with this repostiory can be accessed via doi: [10.5281/zenodo.7536784](https://doi.org/10.5281/zenodo.7536784).
 - gnuplot for plotting
 - basic linux tools
 
