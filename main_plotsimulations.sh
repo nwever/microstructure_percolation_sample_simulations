@@ -29,7 +29,7 @@ echo "set palette defined (0 \"#999999\", 0.000001 \"#EFF3FF\", 2 \"#C6DBEF\", 4
 echo "set xrange[0:*]" >> ${plotfilename}
 echo "set xtics out nomirror" >> ${plotfilename}
 echo "set ytics out nomirror" >> ${plotfilename}
-echo "set yl 'Depth (m)'" >> ${plotfilename}
+echo "set yl 'Height (m)'" >> ${plotfilename}
 echo "set xtics 200" >> ${plotfilename}
 echo "set xl 'Hours'" >> ${plotfilename}
 echo "set cbl 'LWC (%)" >> ${plotfilename}
@@ -45,7 +45,7 @@ echo "set palette defined (0 \"#999999\", 0.000001 \"#EFF3FF\", 2 \"#C6DBEF\", 4
 echo "set xrange[0:*]" >> ${plotfilename}
 echo "set xtics out nomirror" >> ${plotfilename}
 echo "set ytics out nomirror" >> ${plotfilename}
-echo "set yl 'Depth (m)'" >> ${plotfilename}
+echo "set yl 'Height (m)'" >> ${plotfilename}
 echo "set cbl 'LWC (%)" >> ${plotfilename}
 echo "set obj 1 rectangle from graph 0, graph 0 to graph 1, graph 1 fc rgb \"white\"" >> ${plotfilename}
 echo "set label 100 \"(b)\" at graph -0.32, graph 1.01 center front tc \"#000000\" font \"Helvetica,24\"" >> ${plotfilename}
@@ -56,7 +56,7 @@ echo "" >> ${plotfilename}
 echo "set cbrange[0.6:1.2]" >> ${plotfilename}
 echo "set palette defined ( 0 '#8C510A', 1 '#BF812D', 2 '#DFC27D', 3 '#F6E8C3', 4 '#C7EAE5', 5 '#80CDC1', 6 '#35978F', 7 '#01665E' )" >> ${plotfilename}
 echo "set xtics out" >> ${plotfilename}
-echo "set yl 'Depth (m)'" >> ${plotfilename}
+echo "set yl 'Height (m)'" >> ${plotfilename}
 echo "set cbl 'Grain size (mm)" >> ${plotfilename}
 echo "set obj 1 rectangle from graph 0, graph 0 to graph 1, graph 1 fc rgb \"white\"" >> ${plotfilename}
 echo "${xlabels}" >> ${plotfilename}
@@ -69,7 +69,7 @@ echo "TSCALE=20; RMARGIN_L = TSCALE*GPVAL_TERM_XMAX/(1.0*GPVAL_TERM_XSIZE); LMAR
 echo "set cbrange[0.6:1.2]" >> ${plotfilename}
 echo "set palette defined ( 0 '#8C510A', 1 '#BF812D', 2 '#DFC27D', 3 '#F6E8C3', 4 '#C7EAE5', 5 '#80CDC1', 6 '#35978F', 7 '#01665E' )" >> ${plotfilename}
 echo "set xtics out" >> ${plotfilename}
-echo "set yl 'Depth (m)'" >> ${plotfilename}
+echo "set yl 'Height (m)'" >> ${plotfilename}
 echo "set cbl 'Grain size (mm)" >> ${plotfilename}
 echo "set obj 1 rectangle from graph 0, graph 0 to graph 1, graph 1 fc rgb \"white\"" >> ${plotfilename}
 echo "${xlabels}" >> ${plotfilename}
@@ -123,8 +123,8 @@ echo "set xl 'Time (hours)'" >> ${plotfilename}
 echo "set yl 'Grain size (mm)' offset 0.9,0" >> ${plotfilename}
 echo "set ytics autofreq" >> ${plotfilename}
 echo "set ytics 0.1" >> ${plotfilename}
-echo "set yrange[0.5:1.1]" >> ${plotfilename}
-echo "set key at graph 0.98, graph 0.374 font ',15'" >> ${plotfilename}
+echo "set yrange[0.5:1.4]" >> ${plotfilename}
+echo "set key at graph 0.74, graph 0.94 font ',15'" >> ${plotfilename}
 echo "set label 100 \"(a)\" at graph -0.19, graph 1.14 center front tc \"#000000\" font \"Helvetica,22\"" >> ${plotfilename}
 echo "pl \"<(awk '(NR==101) {for(i=1; i<=NF; i++) {print \$i}}' postprocess/${g1}_gs.dat)\" w l lw 2 lc rgb 'black' title 'FC above transition' \\" >> ${plotfilename}
 echo ",  \"<(awk '(NR==102) {for(i=1; i<=NF; i++) {print \$i}}' postprocess/${g1}_gs.dat)\" w l lw 2 lc rgb 'red' title 'FC below transition' \\" >> ${plotfilename}
@@ -180,9 +180,8 @@ echo ",  \"<(awk '(NR==102) {for(i=1; i<=NF; i++) {print \$i}}' postprocess/${g2
 # Cold snow with temp gradient
 g1=forcing_REQ_sample1_drysnow
 g2=forcing_REQ_sample2_drysnow
-echo "set title 'Firn at -10 {\260}C with -10 {\260}C/m gradient" >> ${plotfilename}
+echo "set title 'Firn at -20 {\260}C with -25 {\260}C/m gradient" >> ${plotfilename}
 echo "set yl 'Grain size (mm)' offset 0.9,0" >> ${plotfilename}
-echo "set yrange[0.5:1.5]" >> ${plotfilename}
 echo "set ytics autofreq" >> ${plotfilename}
 echo "set ytics 0.1" >> ${plotfilename}
 echo "set xtics 2000" >> ${plotfilename}
